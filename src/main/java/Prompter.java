@@ -7,7 +7,6 @@ public class Prompter {
     private int amount;
     private int guess;
     private int attempts;
-    private boolean playAgain;
 
     // Initial prompting to insert the item and fill the jar
     public void promptForItemAndAmount () {

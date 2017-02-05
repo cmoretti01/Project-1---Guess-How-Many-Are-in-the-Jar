@@ -10,16 +10,14 @@ public class Prompter {
 
     // Initial prompting to insert the item and fill the jar
     public void promptForItemAndAmount () {
+        boolean isGuessValid = false;
+
         System.out.printf("Guess How Many Are in the Jar - Welcome to the game!!\n");
         System.out.printf("-----------------------------------------------------\n");
         System.out.printf("What type item should be put in the jar? ");
         itemInput = scanner.nextLine();
         System.out.printf("What is the maximum amount of %s? ",itemInput);
         amount = scanner.nextInt();
-    }
-    // Call to play the game
-    public void playGame() {
-        boolean isGuessValid = false;
 
         mJar = new Jar(itemInput, amount);
         mJar.fillJar(amount);

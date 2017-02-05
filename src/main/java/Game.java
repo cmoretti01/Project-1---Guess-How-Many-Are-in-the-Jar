@@ -4,7 +4,6 @@ public class Game {
         do {
             prompter.promptForItemAndAmount();
             prompter.playGame();
-            prompter.playAgain();
         } while(prompter.isPlayAgain());
 
     }

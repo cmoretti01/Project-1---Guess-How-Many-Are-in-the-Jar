@@ -12,9 +12,7 @@ public class Prompter {
     public void playGame() {
         boolean isGuessValid = false;
 
-        System.out.printf("Guess How Many Are in the Jar - Welcome to the game!!\n");
-        System.out.printf("-----------------------------------------------------\n");
-        System.out.printf("What type item should be put in the jar? ");
+        System.out.printf("What type of item? ");
         itemInput = scanner.nextLine();
         System.out.printf("What is the maximum amount of %s? ", itemInput);
         amount = scanner.nextInt();
@@ -29,10 +27,9 @@ public class Prompter {
                         mJar.getItem(), mJar.getMaxAmount());
                 guess = scanner.nextInt();
                 if (guess > mJar.getMaxAmount()) {
-                    System.out.printf("\nOps!!! The guess is larger than the maximum amount of %s.", mJar.getItem());
-                    System.out.printf("Please, give another guess.\n ");
+                    System.out.printf("\nYour guess must be less than %s.", mJar.getItem());
                 }
-            }while (guess > mJar.getAmount()) ;
+            } while (guess > mJar.getAmount()) ;
                 attempts++;
                 if (guess != mJar.getAmount()) {
                     System.out.printf("Try again! ");
